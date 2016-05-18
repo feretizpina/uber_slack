@@ -8,14 +8,8 @@ class UberAPI
 
   BASE_URL = ENV["uber_base_url"]
 
-
   def self.request_user_access_token(code)
-    # After user has clicked "yes" on Uber OAuth page
-    post_params = BASE_PARAMS.merge("code" => code)
-
-    # post request to uber to trade code for user access token
-    resp = RestClient.post(ENV['uber_oauth_url'], post_params)
-    JSON.parse(resp.body)
+    RequestAccessTokenJob.perform(code)
   end
 
   def self.connect_uber(code)

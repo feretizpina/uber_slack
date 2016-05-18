@@ -191,6 +191,9 @@ GEM
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
       rspec-mocks (~> 3.4.0)
+    rspec-activejob (0.6.1)
+      activejob (>= 4.2)
+      rspec-mocks
     rspec-core (3.4.1)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -284,6 +287,7 @@ DEPENDENCIES
   redis
   rest-client
   rollbar (~> 2.8.3)
+  rspec-activejob
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

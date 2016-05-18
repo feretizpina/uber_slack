@@ -38,6 +38,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rspec-activejob'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'better_errors'
