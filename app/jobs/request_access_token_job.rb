@@ -1,6 +1,5 @@
 class RequestAccessTokenJob < ActiveJob::Base
   queue_as :auth
-  sidekiq_options retry: false
 
   BASE_PARAMS = {
     'client_secret' => ENV['uber_client_secret'],
